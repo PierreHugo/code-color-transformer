@@ -3,42 +3,40 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.red
+            Color.Background.primary
                 .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 20) {
                 Text("Welcome to the app!")
                     .font(.largeTitle)
-                    .foregroundStyle(Color.blue)
+                    .foregroundStyle(Color.Text.primary)
 
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.green)
+                    .fill(Color.blue)
                     .frame(width: 200, height: 100)
-                    .shadow(color: Color.orange(0.3), radius: 10, x: 0, y: 5)
+                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
 
                 Button(action: {}) {
                     Text("Press Me")
                         .padding()
-                        .background(Color.purple)
-                        .foregroundColor(Color.pink)
+                        .background(Color.Palette.red)
+                        .foregroundColor(Color.white)
                         .cornerRadius(8)
                 }
 
                 HStack {
                     Circle()
-                        .fill(Color.yellow)
+                        .fill(Color.green)
                         .frame(width: 50, height: 50)
                     Circle()
-                        .fill(Color.teal)
+                        .fill(Color.orange)
                         .frame(width: 50, height: 50)
                 }
 
                 Rectangle()
-                    .stroke(Color.indigo, lineWidth: 4)
+                    .stroke(Color.gray, lineWidth: 4)
                     .frame(width: 150, height: 80)
             }
         }
     }
 }
-
-
