@@ -25,11 +25,17 @@ python main.py
 ```
 
 ### (Optional) Build a standalone executable
-If you want to create a `.exe` (Windows) or `.app` (macOS):
+If you want to create a `.exe` (Windows) :
 ```
 pip install pyinstaller
 pyinstaller --noconsole --onefile --windowed --name CodeColor main.py
 ```
+or `.app` (macOS) :
+```
+python3 -m pip install pyinstaller
+python3 -m PyInstaller --noconsole --onefile --windowed --name CodeColor main.py
+```
+
 Your executable will be located in the `dist/` folder.
 
 ## 📦 Direct Download (Recommended)
